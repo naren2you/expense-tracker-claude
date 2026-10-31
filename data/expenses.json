@@ -1,0 +1,422 @@
+[
+  {
+    "id": "e1",
+    "date": "2026-08-01",
+    "category": "shopping",
+    "amount": 1800,
+    "note": "Flipkart: earphones"
+  },
+  {
+    "id": "e2",
+    "date": "2026-08-03",
+    "category": "food",
+    "amount": 1310,
+    "note": "Weekend brunch with friends"
+  },
+  {
+    "id": "e3",
+    "date": "2026-08-03",
+    "category": "rent",
+    "amount": 18000,
+    "note": "Rent for August"
+  },
+  {
+    "id": "e4",
+    "date": "2026-08-04",
+    "category": "shopping",
+    "amount": 3450,
+    "note": "Running shoes"
+  },
+  {
+    "id": "e5",
+    "date": "2026-08-04",
+    "category": "travel",
+    "amount": 870,
+    "note": "Ola to airport"
+  },
+  {
+    "id": "e6",
+    "date": "2026-08-06",
+    "category": "health",
+    "amount": 520,
+    "note": "Doctor consultation"
+  },
+  {
+    "id": "e7",
+    "date": "2026-08-06",
+    "category": "travel",
+    "amount": 1200,
+    "note": "Bus pass"
+  },
+  {
+    "id": "e8",
+    "date": "2026-08-07",
+    "category": "food",
+    "amount": 120,
+    "note": "Milk and bread"
+  },
+  {
+    "id": "e9",
+    "date": "2026-08-07",
+    "category": "utilities",
+    "amount": 880,
+    "note": "Gas cylinder refill"
+  },
+  {
+    "id": "e10",
+    "date": "2026-08-08",
+    "category": "travel",
+    "amount": 480,
+    "note": "Metro card recharge"
+  },
+  {
+    "id": "e11",
+    "date": "2026-08-12",
+    "category": "health",
+    "amount": 430,
+    "note": "Vitamins"
+  },
+  {
+    "id": "e12",
+    "date": "2026-08-15",
+    "category": "food",
+    "amount": 250,
+    "note": "Saravana Bhavan breakfast"
+  },
+  {
+    "id": "e13",
+    "date": "2026-08-16",
+    "category": "travel",
+    "amount": 66,
+    "note": "Rapido to gym"
+  },
+  {
+    "id": "e14",
+    "date": "2026-08-16",
+    "category": "utilities",
+    "amount": 630,
+    "note": "Mobile recharge"
+  },
+  {
+    "id": "e15",
+    "date": "2026-08-17",
+    "category": "utilities",
+    "amount": 540,
+    "note": "Mobile recharge"
+  },
+  {
+    "id": "e16",
+    "date": "2026-08-20",
+    "category": "utilities",
+    "amount": 460,
+    "note": "Mobile recharge"
+  },
+  {
+    "id": "e17",
+    "date": "2026-08-21",
+    "category": "food",
+    "amount": 58,
+    "note": "Tea and vada"
+  },
+  {
+    "id": "e18",
+    "date": "2026-08-22",
+    "category": "food",
+    "amount": 1230,
+    "note": "Groceries: rice, dal, oil"
+  },
+  {
+    "id": "e19",
+    "date": "2026-08-23",
+    "category": "food",
+    "amount": 60,
+    "note": "Milk and bread"
+  },
+  {
+    "id": "e20",
+    "date": "2026-08-23",
+    "category": "travel",
+    "amount": 720,
+    "note": "Train to Madurai"
+  },
+  {
+    "id": "e21",
+    "date": "2026-08-24",
+    "category": "food",
+    "amount": 1510,
+    "note": "Groceries: rice, dal, oil"
+  },
+  {
+    "id": "e22",
+    "date": "2026-08-29",
+    "category": "subscriptions",
+    "amount": 219,
+    "note": "iCloud 200GB"
+  },
+  {
+    "id": "e23",
+    "date": "2026-08-30",
+    "category": "shopping",
+    "amount": 2460,
+    "note": "Flipkart: earphones"
+  },
+  {
+    "id": "e24",
+    "date": "2026-08-31",
+    "category": "travel",
+    "amount": 640,
+    "note": "Ola to airport"
+  },
+  {
+    "id": "e25",
+    "date": "2026-09-02",
+    "category": "subscriptions",
+    "amount": 119,
+    "note": "Spotify"
+  },
+  {
+    "id": "e26",
+    "date": "2026-09-02",
+    "category": "subscriptions",
+    "amount": 149,
+    "note": "YouTube Premium"
+  },
+  {
+    "id": "e27",
+    "date": "2026-09-03",
+    "category": "health",
+    "amount": 900,
+    "note": "Blood test"
+  },
+  {
+    "id": "e28",
+    "date": "2026-09-03",
+    "category": "rent",
+    "amount": 18000,
+    "note": "Rent for September"
+  },
+  {
+    "id": "e29",
+    "date": "2026-09-04",
+    "category": "subscriptions",
+    "amount": 1700,
+    "note": "Claude Pro"
+  },
+  {
+    "id": "e30",
+    "date": "2026-09-05",
+    "category": "food",
+    "amount": 700,
+    "note": "Groceries: rice, dal, oil"
+  },
+  {
+    "id": "e31",
+    "date": "2026-09-07",
+    "category": "travel",
+    "amount": 1030,
+    "note": "Petrol"
+  },
+  {
+    "id": "e32",
+    "date": "2026-09-11",
+    "category": "travel",
+    "amount": 150,
+    "note": "Auto to office"
+  },
+  {
+    "id": "e33",
+    "date": "2026-09-15",
+    "category": "food",
+    "amount": 330,
+    "note": "Zomato biryani"
+  },
+  {
+    "id": "e34",
+    "date": "2026-09-16",
+    "category": "food",
+    "amount": 450,
+    "note": "Swiggy dinner"
+  },
+  {
+    "id": "e35",
+    "date": "2026-09-19",
+    "category": "food",
+    "amount": 1020,
+    "note": "Groceries: rice, dal, oil"
+  },
+  {
+    "id": "e36",
+    "date": "2026-09-22",
+    "category": "subscriptions",
+    "amount": 149,
+    "note": "YouTube Premium"
+  },
+  {
+    "id": "e37",
+    "date": "2026-09-23",
+    "category": "travel",
+    "amount": 580,
+    "note": "Train to Madurai"
+  },
+  {
+    "id": "e38",
+    "date": "2026-09-24",
+    "category": "utilities",
+    "amount": 880,
+    "note": "Gas cylinder refill"
+  },
+  {
+    "id": "e39",
+    "date": "2026-09-25",
+    "category": "health",
+    "amount": 260,
+    "note": "Apollo pharmacy"
+  },
+  {
+    "id": "e40",
+    "date": "2026-09-25",
+    "category": "travel",
+    "amount": 2050,
+    "note": "Petrol"
+  },
+  {
+    "id": "e41",
+    "date": "2026-09-26",
+    "category": "shopping",
+    "amount": 690,
+    "note": "Kitchen containers"
+  },
+  {
+    "id": "e42",
+    "date": "2026-09-28",
+    "category": "food",
+    "amount": 100,
+    "note": "Milk and bread"
+  },
+  {
+    "id": "e43",
+    "date": "2026-10-01",
+    "category": "food",
+    "amount": 250,
+    "note": "Swiggy dinner"
+  },
+  {
+    "id": "e44",
+    "date": "2026-10-03",
+    "category": "rent",
+    "amount": 18000,
+    "note": "Rent for October"
+  },
+  {
+    "id": "e45",
+    "date": "2026-10-05",
+    "category": "food",
+    "amount": 510,
+    "note": "Swiggy dinner"
+  },
+  {
+    "id": "e46",
+    "date": "2026-10-06",
+    "category": "shopping",
+    "amount": 1940,
+    "note": "Flipkart: earphones"
+  },
+  {
+    "id": "e47",
+    "date": "2026-10-06",
+    "category": "utilities",
+    "amount": 999,
+    "note": "Jio fibre broadband"
+  },
+  {
+    "id": "e48",
+    "date": "2026-10-07",
+    "category": "food",
+    "amount": 30,
+    "note": "Tea and vada"
+  },
+  {
+    "id": "e49",
+    "date": "2026-10-07",
+    "category": "food",
+    "amount": 1140,
+    "note": "Weekend brunch with friends"
+  },
+  {
+    "id": "e50",
+    "date": "2026-10-07",
+    "category": "shopping",
+    "amount": 1550,
+    "note": "Shirt from Pantaloons"
+  },
+  {
+    "id": "e51",
+    "date": "2026-10-08",
+    "category": "food",
+    "amount": 240,
+    "note": "Swiggy dinner"
+  },
+  {
+    "id": "e52",
+    "date": "2026-10-09",
+    "category": "food",
+    "amount": 120,
+    "note": "Lunch at office canteen"
+  },
+  {
+    "id": "e53",
+    "date": "2026-10-12",
+    "category": "food",
+    "amount": 880,
+    "note": "Weekend brunch with friends"
+  },
+  {
+    "id": "e54",
+    "date": "2026-10-13",
+    "category": "travel",
+    "amount": 880,
+    "note": "Ola to airport"
+  },
+  {
+    "id": "e55",
+    "date": "2026-10-13",
+    "category": "utilities",
+    "amount": 1920,
+    "note": "Electricity bill (TNEB)"
+  },
+  {
+    "id": "e56",
+    "date": "2026-10-16",
+    "category": "food",
+    "amount": 330,
+    "note": "Zomato biryani"
+  },
+  {
+    "id": "e57",
+    "date": "2026-10-16",
+    "category": "food",
+    "amount": 340,
+    "note": "Zomato biryani"
+  },
+  {
+    "id": "e58",
+    "date": "2026-10-17",
+    "category": "health",
+    "amount": 450,
+    "note": "Vitamins"
+  },
+  {
+    "id": "e59",
+    "date": "2026-10-18",
+    "category": "subscriptions",
+    "amount": 1700,
+    "note": "Claude Pro"
+  },
+  {
+    "id": "e60",
+    "date": "2026-10-20",
+    "category": "food",
+    "amount": 440,
+    "note": "Zomato biryani"
+  }
+]

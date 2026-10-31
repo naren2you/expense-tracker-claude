@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expense Tracker</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+    h1 { font-size: 1.4rem; }
+    form, .filter { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+    input, select, button { padding: .4rem .6rem; font: inherit; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: .4rem .5rem; border-bottom: 1px solid #ddd; }
+    td.amount, th.amount { text-align: right; }
+    .total { margin-top: .5rem; font-weight: 600; }
+    .error { color: #b00020; }
+  </style>
+</head>
+<body>
+  <h1>Expense Tracker</h1>
+
+  <form id="add">
+    <input name="date" type="date" required>
+    <select name="category" required>
+      <option value="">category</option>
+      <option>food</option><option>travel</option><option>rent</option><option>utilities</option>
+      <option>shopping</option><option>health</option><option>subscriptions</option>
+    </select>
+    <input name="amount" type="number" min="1" step="1" placeholder="amount (INR)" required>
+    <input name="note" placeholder="note">
+    <button type="submit">Add</button>
+    <span id="error" class="error"></span>
+  </form>
+
+  <div class="filter">
+    <label>Month <input id="month" type="month"></label>
+    <button id="clear" type="button">All</button>
+  </div>
+
+  <table>
+    <thead><tr><th>Date</th><th>Category</th><th class="amount">Amount</th><th>Note</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="total" id="total"></div>
+
+  <script>
+    const rows = document.getElementById('rows');
+    const totalEl = document.getElementById('total');
+    const monthEl = document.getElementById('month');
+    const errorEl = document.getElementById('error');
+    const inr = (n) => '₹' + n.toLocaleString('en-IN');
+
+    function lastDay(month) {
+      const [y, m] = month.split('-').map(Number);
+      return new Date(Date.UTC(y, m, 0)).toISOString().slice(0, 10);
+    }
+
+    async function load() {
+      const month = monthEl.value;
+      const qs = month ? `?from=${month}-01&to=${lastDay(month)}` : '';
+      const list = await (await fetch('/expenses' + qs)).json();
+      list.sort((a, b) => b.date.localeCompare(a.date));
+      rows.innerHTML = list.map((e) =>
+        `<tr><td>${e.date}</td><td>${e.category}</td><td class="amount">${inr(e.amount)}</td><td>${escape(e.note)}</td></tr>`
+      ).join('');
+      totalEl.textContent = `${list.length} expenses, total ${inr(list.reduce((s, e) => s + e.amount, 0))}`;
+    }
+
+    function escape(s) {
+      return String(s || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    }
+
+    document.getElementById('add').addEventListener('submit', async (ev) => {
+      ev.preventDefault();
+      errorEl.textContent = '';
+      const f = new FormData(ev.target);
+      const body = { date: f.get('date'), category: f.get('category'), amount: Number(f.get('amount')), note: f.get('note') };
+      const res = await fetch('/expenses', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+      if (!res.ok) { errorEl.textContent = (await res.json()).error; return; }
+      ev.target.reset();
+      load();
+    });
+
+    monthEl.addEventListener('change', load);
+    document.getElementById('clear').addEventListener('click', () => { monthEl.value = ''; load(); });
+    load();
+  </script>
+</body>
+</html>

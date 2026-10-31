@@ -1,0 +1,17 @@
+{
+  "name": "expense-tracker-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Small Express expense tracker used in the Claude Code workshop",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
