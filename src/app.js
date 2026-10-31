@@ -18,7 +18,7 @@ function isValidMonth(s) {
 }
 
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok' });
+  res.json({ status: 'ok', version: '1.0.0' });
 });
 
 // GET /expenses?from=YYYY-MM-DD&to=YYYY-MM-DD&category=food  (all optional, range inclusive)
