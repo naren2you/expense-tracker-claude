@@ -66,6 +66,32 @@ app.post('/expenses', (req, res) => {
   res.status(201).json(row);
 });
 
+// Quote a CSV field if it holds a comma, double quote or newline; double inner quotes.
+function csvField(v) {
+  const s = v == null ? '' : String(v);
+  return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+}
+
+// GET /expenses/export.csv?from=YYYY-MM-DD&to=YYYY-MM-DD  (both required, inclusive)
+app.get('/expenses/export.csv', (req, res) => {
+  const { from, to } = req.query;
+  if (!isValidDate(from)) return res.status(400).json({ error: 'from must be YYYY-MM-DD' });
+  if (!isValidDate(to)) return res.status(400).json({ error: 'to must be YYYY-MM-DD' });
+  if (from > to) return res.status(400).json({ error: 'from must not be after to' });
+
+  const rows = store
+    .readAll()
+    .filter((r) => r.date >= from && r.date <= to)
+    .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+  const lines = ['date,category,amount,note', ...rows.map((r) => `${r.date},${r.category},${r.amount},${csvField(r.note)}`)];
+
+  res.set({
+    'Content-Type': 'text/csv; charset=utf-8',
+    'Content-Disposition': `attachment; filename="expenses-${from}-${to}.csv"`,
+  });
+  res.send(lines.join('\n') + '\n');
+});
+
 // --- routes end ---
 
 module.exports = app;
